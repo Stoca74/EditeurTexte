@@ -10,12 +10,12 @@ public class CommandeRemplacer extends CommandeDocument{
 
     @Override
     public void executer() {
-        if(parameters.length < 2) {
-            System.err.println("Format attendu : ajouter;texte");
+        if(parameters.length < 3) {
+            System.err.println("Format attendu : remplacer;int debut;int fin;texte");
             return;
         }
-        String texte = parameters[1];
-        this.document.ajouter(texte);
+        String texte = parameters[3];
+        this.document.remplacer(Integer.parseInt(parameters[1]), Integer.parseInt(parameters[2]), texte);
         super.executer();
     }
 }
