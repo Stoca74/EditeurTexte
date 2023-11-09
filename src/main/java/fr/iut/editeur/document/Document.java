@@ -36,4 +36,8 @@ public class Document {
         majPart = majPart.toUpperCase();
         remplacer(start, end, majPart);
     }
+
+    public void effacer(){
+        texte = "";
+    }
 }
