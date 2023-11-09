@@ -10,7 +10,11 @@ public class CommandeEffacer extends CommandeDocument{
 
     @Override
     public void executer() {
-        this.document.effacer();
+        if(parameters.length < 2) {
+            System.err.println("Format attendu : majuscules;int depart;int fin");
+            return;
+        }
+        this.document.effacer(Integer.parseInt(parameters[1]), Integer.parseInt(parameters[2]));
         super.executer();
     }
 }
