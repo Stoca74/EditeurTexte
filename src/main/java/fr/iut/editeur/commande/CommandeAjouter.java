@@ -2,6 +2,9 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
+/**
+ * Classe qui s'occupe de la commande ajouter
+ */
 public class CommandeAjouter extends CommandeDocument {
 
 

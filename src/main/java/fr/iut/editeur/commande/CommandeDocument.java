@@ -2,6 +2,9 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
+/**
+ * Classe qui s'occupe de gérer la classe Document
+ */
 public abstract class CommandeDocument implements Commande {
 
     protected Document document;
@@ -13,6 +16,9 @@ public abstract class CommandeDocument implements Commande {
         this.parameters = parameters;
     }
 
+    /**
+     * permet l'éxécution de la classe Document
+     */
     @Override
     public void executer() {
         System.out.println(this.document);

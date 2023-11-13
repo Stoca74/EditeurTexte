@@ -1,5 +1,8 @@
 package fr.iut.editeur.document;
 
+/**
+ * Classe qui répertorie les différentes fonctionnalités
+ */
 public class Document {
 
     private String texte;
@@ -16,6 +19,10 @@ public class Document {
         this.texte = texte;
     }
 
+    /**
+     * ajoute texte au texte déjà écrit et si pas de texte écrit ajoute juste le texte
+     * @param texte le texte à ajouter
+     */
     public void ajouter(String texte) {
         this.texte += texte;
     }
@@ -25,6 +32,12 @@ public class Document {
         return this.texte;
     }
 
+    /**
+     * fonction qui remplace le texte de start à end par remplacement
+     * @param start l'endroit où commence la modification
+     * @param end la fin de la modification
+     * @param remplacement le texte à mettre à la place de l'ancien
+     */
     public void remplacer(int start, int end, String remplacement) {
         String leftPart = texte.substring(0, start);
         String rightPart = texte.substring(end);
@@ -41,6 +54,9 @@ public class Document {
         remplacer(start, end, "");
     }
 
+    /**
+     * efface tout
+     */
     public void clear(){
         texte = "";
     }
